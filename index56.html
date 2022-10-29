@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>waterdroplet</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+     body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #edeeed;
+        min-height: 100vh;
+
+     }
+     .drops
+     {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position : relative;
+     }
+     .drop{
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        
+        background: transparent;
+        border-radius: 36% 64% 68% 32% / 36% 38% 62% 64%;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, .5), 15px 20px 20px rgba(0, 0, 0, .5);
+     }
+     .drop::before
+     {
+        content: '';
+        position: absolute;
+        top: 25px;
+        left: 35px;
+        background: #fff;
+        height: 20px;
+        width: 20px;
+        border-radius: 36% 64% 68% 32% / 36% 38% 62% 64%;
+     }
+     .drop::after
+     {
+        content: '';
+        position: absolute;
+        top: 25px;
+        left: 65px;
+        background: #fff;
+        height: 10px;
+        width: 10px;
+        border-radius: 36% 64% 68% 32% / 36% 38% 62% 64%;
+
+     }
+     .drop:nth-child(2)
+     {
+        transform: scale(0.5) translate(-200px,180px);
+        border-radius: 36% 64% 68% 32% / 36% 38% 62% 64%
+        
+
+     }
+     .drop:nth-child(3)
+     {
+        transform: scale(0.5) translate(180px,180px);
+        border-radius: 36% 64% 68% 32% / 36% 38% 62% 64%
+       
+     }
+
+
+    
+    </style>
+</head>
+<body>
+    <div class="drops">
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+    </div>
+    
+</body>
+</html>
